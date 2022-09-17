@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'roles-sample';
+
+  formChanged({ role }: { role: 'guest' | 'user' | 'admin' }) {
+    console.log(role);
+  }
 }
