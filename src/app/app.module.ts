@@ -3,10 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { IfPriorityDirective } from './directives/if-priority.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IfPriorityDirective,
   ],
   imports: [
     BrowserModule,

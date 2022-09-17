@@ -9,8 +9,18 @@
     <label for="admin">Admin</label>
   </div>
 </form>
+
 <div class="areas">
-  <div class="area guest">This is available to anyone.</div>
-  <div class="area user">This is only available to logged users.</div>
-  <div class="area admin">This is only available to admins.</div>
+  <div *appIfPriority="UserRole.Guest" 
+       class="area guest">
+    This is available to anyone.
+  </div>
+  <div *appIfPriority="UserRole.User" 
+       class="area user">
+    This is only available to logged users.
+  </div>
+  <div *appIfPriority="UserRole.Admin" 
+       class="area admin">
+    This is only available to admins.
+  </div>
 </div>
